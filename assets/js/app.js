@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let count = 0;
-    const totalRepeats = 15 * 4; 
+    const totalRepeats = 3; 
 
     const interval = setInterval(() => {
         console.log(lyrics[count % 2]);
