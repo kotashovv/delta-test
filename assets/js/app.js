@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const lyrics = [
+        'чики бамбони',
+        'чики влюбленный',
+    ];
+
+    let count = 0;
+    const totalRepeats = 15 * 4; 
+
+    const interval = setInterval(() => {
+        console.log(lyrics[count % 2]);
+        count++;
+
+        if (count >= totalRepeats) {
+            clearInterval(interval);
+            console.log('🎵 Песня закончилась!, спасибо что зашли в консоль');
+        }
+    }, 1000);
+
+
     const data = [
         { name: 'Выручка, руб', current: '560521', yesterday: '480521', weekDay: '4805121' },
         { name: 'Наличными', current: '3', yesterday: '4', weekDay: '3' },

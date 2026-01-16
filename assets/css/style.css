@@ -467,11 +467,25 @@ body h1 a {
   height: 400px;
 }
 @media (max-width: 768px) {
+  .deltatest {
+    overflow: auto;
+    max-width: calc(100vw - 30px);
+  }
   .deltatest__header, .deltatest__row {
     font-size: 12px;
   }
   .deltatest__header-cell, .deltatest__cell {
     padding: 8px 12px;
     min-width: 80px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .deltatest__header-cell .deltatest__cell-percent, .deltatest__cell .deltatest__cell-percent {
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }

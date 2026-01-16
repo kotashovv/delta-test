@@ -16,6 +16,7 @@ body {
             font-size: 16px;
             text-decoration: none;
             margin-top: 10px;
+
         }
     }
 }
@@ -149,8 +150,16 @@ body {
 
         &__header-cell,
         &__cell {
+            .deltatest__cell-percent{ 
+                position: static;
+                transform: none;
+            }
             padding: 8px 12px;
             min-width: 80px;
+            flex-direction: column;
         }
+
+        overflow: auto;
+        max-width: calc(100vw - 30px);
     }
 }
